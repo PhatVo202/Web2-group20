@@ -18,6 +18,20 @@
                     include("main/tintuc.php");
                 } else if ($tam === 'lienhe') {
                     include("main/lienhe.php");
+                }else if ($tam === 'sanpham') {
+                    include("main/sanpham.php");
+                }else if ($tam === 'timkiem') {
+                    include("main/timkiem.php");
+                }else if ($tam === 'dangky') {
+                    include("main/dangky.php");
+                }else if ($tam === 'thanhtoan') {
+                    include("main/thanhtoan.php");
+                }else if ($tam === 'camon') {
+                    include("main/camon.php");
+                }else if ($tam === 'dangnhap') {
+                    include("main/dangnhap.php");
+                }else if ($tam === 'thaydoimatkhau') {
+                    include("main/thaydoimatkhau.php");
                 } else {
                     include("main/index.php");
                 }

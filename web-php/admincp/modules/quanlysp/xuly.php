@@ -9,13 +9,14 @@
     $tomtat = $_POST['tomtat'];
     $noidung = $_POST['noidung'];
     $tinhtrang = $_POST['tinhtrang'];
+    $danhmuc = $_POST['danhmuc'];
     $hinhanh = $_FILES['hinhanh']['name'];
     $hinhanh_tmp = $_FILES['hinhanh']['tmp_name'];
     $hinhanh = time().'_'.$hinhanh;
    
    
     if (isset($_POST['themsanpham']) ) {
-        $sql_them = "INSERT INTO tbl_sanpham(tensanpham,masp,giasp,soluong,hinhanh,tomtat,noidung,tinhtrang) VALUES ('".$tensanpham."','".$masp."','".$giasp."','".$soluong."','".$hinhanh."','".$tomtat."','".$noidung."','".$tinhtrang."')";
+        $sql_them = "INSERT INTO tbl_sanpham(tensanpham,masp,giasp,soluong,hinhanh,tomtat,noidung,tinhtrang,id_danhmuc) VALUES ('".$tensanpham."','".$masp."','".$giasp."','".$soluong."','".$hinhanh."','".$tomtat."','".$noidung."','".$tinhtrang."','".$danhmuc."')";
         mysqli_query($mysqli, $sql_them);
         $local_image = "uploads/";
         move_uploaded_file($hinhanh_tmp,$local_image.$hinhanh);
@@ -23,11 +24,11 @@
     }else if(isset($_POST['suasanpham'])){ 
         if($_POST['hinhanh']){
             $sql_update = " UPDATE tbl_sanpham 
-            SET tensanpham = '".$tensanpham."', masp = '".$masp."',giasp = '".$giasp."',soluong ='".$soluong."',hinhanh ='".$hinhanh."',tomtat ='".$tomtat."',noidung ='".$noidung."',tinhtrang ='".$tinhtrang."' 
+            SET tensanpham = '".$tensanpham."', masp = '".$masp."',giasp = '".$giasp."',soluong ='".$soluong."',hinhanh ='".$hinhanh."',tomtat ='".$tomtat."',noidung ='".$noidung."',tinhtrang ='".$tinhtrang."', id_danhmuc ='".$danhmuc."'
             WHERE id_sanpham='$_GET[idsanpham]'";
         }else{
             $sql_update = " UPDATE tbl_sanpham 
-            SET tensanpham = '".$tensanpham."', masp = '".$masp."',giasp = '".$giasp."',soluong ='".$soluong."',hinhanh ='".$hinhanh."',tomtat ='".$tomtat."',noidung ='".$noidung."',tinhtrang ='".$tinhtrang."' 
+            SET tensanpham = '".$tensanpham."', masp = '".$masp."',giasp = '".$giasp."',soluong ='".$soluong."',hinhanh ='".$hinhanh."',tomtat ='".$tomtat."',noidung ='".$noidung."',tinhtrang ='".$tinhtrang."' , id_danhmuc ='".$danhmuc."'
             WHERE id_sanpham='$_GET[idsanpham]'";
         }
        

@@ -46,6 +46,27 @@
             <textarea name="noidung" class="form-control col-7 cols="70" rows="10"><?php echo $row['noidung'] ?></textarea>
         </div>
         <div class="row mt-3">
+            <label for="" class="col-5 font-weight-bold">Danh mục sản phẩm</label>
+            <select class="col-7 form-control" name="danhmuc" >
+                <?php
+                $sql_danhmuc = "SELECT * FROM tbl_danhmuc ORDER BY id_danhmuc DESC";
+                $query_danhmuc = mysqli_query($mysqli,$sql_danhmuc);
+                while($row_danhmuc = mysqli_fetch_array($query_danhmuc)){
+                    if($row_danhmuc['id_danhmuc']==$row['id_danhmuc']){
+                ?>
+                <option selected value="<?php echo $row_danhmuc['id_danhmuc'] ?>"><?php echo $row_danhmuc['tendanhmuc'] ?></option>
+                <?php
+                    }else{
+                ?>
+                  <option value="<?php echo $row_danhmuc['id_danhmuc'] ?>"><?php echo $row_danhmuc['tendanhmuc'] ?></option>
+                <?php
+                    }
+                }
+                ?>
+        
+            </select>
+        </div>
+        <div class="row mt-3">
             <label for="" class="col-5 font-weight-bold">Tình trạng:</label>
             <select class="col-7 form-control" name="tinhtrang" >
                 <?php 

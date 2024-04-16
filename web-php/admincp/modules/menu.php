@@ -5,4 +5,5 @@
   <a class="nav-item nav-link" href="index.php?action=quanlysp&query=them">Quản lý sản phẩm</a>
   <a class="nav-item nav-link" href="index.php?action=quanlybaiviet&query=them">Quản lý bài viết</a>
   <a class="nav-item nav-link " href="index.php?action=quanlydanhmucbaiviet&query=them">Quản lý danh mục bài viết</a>
+  <a class="nav-item nav-link " href="index.php?action=quanlydonhang&query=lietke">Quản lý đơn hàng</a>
 </nav>

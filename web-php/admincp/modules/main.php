@@ -18,6 +18,10 @@ if ($tam === 'quanlydanhmucsanpham' && $query == 'them') {
     include("modules/quanlysp/lietke.php");
 } else if ($tam === 'quanlysp' && $query == 'sua') {
     include("modules/quanlysp/sua.php");
+}else if ($tam === 'quanlydonhang' && $query == 'lietke') {
+    include("modules/quanlydonhang/lietke.php");
+}else if ($tam === 'donhang' && $query == 'xemdonhang') {
+    include("modules/quanlydonhang/xemdonhang.php");
 } else {
     include("modules/dashboard.php");
 }
