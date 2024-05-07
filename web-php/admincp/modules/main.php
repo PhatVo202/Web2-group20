@@ -1,5 +1,6 @@
-<div>
-<?php
+<div class="col-10 ">
+    <div class="m-4 bg-white p-4">
+    <?php
 if (isset($_GET['action']) && isset($_GET['query'])) {
     $tam = $_GET['action'];
     $query = $_GET['query'];
@@ -26,4 +27,5 @@ if ($tam === 'quanlydanhmucsanpham' && $query == 'them') {
     include("modules/dashboard.php");
 }
 ?>
+    </div>
 </div>

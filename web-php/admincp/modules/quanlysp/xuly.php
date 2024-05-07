@@ -22,13 +22,21 @@
         move_uploaded_file($hinhanh_tmp,$local_image.$hinhanh);
         header('Location:../../index.php?action=quanlysp&query=them');
     }else if(isset($_POST['suasanpham'])){ 
-        if($_POST['hinhanh']){
-            $sql_update = " UPDATE tbl_sanpham 
+        if($hinhanh!=''){
+            move_uploaded_file($hinhanh_tmp,'/uploads'.$hinhanh);
+            $sql = "SELECT * FROM tbl_sanpham WHERE id_sanpham = '$_GET[idsanpham]' LIMIT 1";
+            $query = mysqli_query($mysqli,$sql);
+            while($row = mysqli_fetch_array($query)){
+                unlink('uploads/'.$row['hinhanh']);
+            }
+            
+            $sql_update = "UPDATE tbl_sanpham 
             SET tensanpham = '".$tensanpham."', masp = '".$masp."',giasp = '".$giasp."',soluong ='".$soluong."',hinhanh ='".$hinhanh."',tomtat ='".$tomtat."',noidung ='".$noidung."',tinhtrang ='".$tinhtrang."', id_danhmuc ='".$danhmuc."'
             WHERE id_sanpham='$_GET[idsanpham]'";
+           
         }else{
             $sql_update = " UPDATE tbl_sanpham 
-            SET tensanpham = '".$tensanpham."', masp = '".$masp."',giasp = '".$giasp."',soluong ='".$soluong."',hinhanh ='".$hinhanh."',tomtat ='".$tomtat."',noidung ='".$noidung."',tinhtrang ='".$tinhtrang."' , id_danhmuc ='".$danhmuc."'
+            SET tensanpham = '".$tensanpham."', masp = '".$masp."',giasp = '".$giasp."',soluong ='".$soluong."',tomtat ='".$tomtat."',noidung ='".$noidung."',tinhtrang ='".$tinhtrang."' , id_danhmuc ='".$danhmuc."'
             WHERE id_sanpham='$_GET[idsanpham]'";
         }
        

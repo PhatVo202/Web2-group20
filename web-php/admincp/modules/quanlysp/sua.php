@@ -7,7 +7,7 @@
     while($row = mysqli_fetch_array($query_sua_sp)){
 ?>
 
-<form class="form-group mt-5" method="POST" action="modules/quanlysp/xuly.php?idsanpham=<?php echo $row['idsanpham'] ?>"  enctype="multipart/form-data">
+<form class="form-group mt-5" method="POST" action="modules/quanlysp/xuly.php?idsanpham=<?php echo $row['id_sanpham'] ?>"  enctype="multipart/form-data">
     <h4 class="text-center text-danger">Sửa sản phẩm</h4>
         <div class="row">
             <label for="" class="col-5 font-weight-bold">Tên sản phẩm:</label>

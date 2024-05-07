@@ -16,15 +16,16 @@ if(!isset($_SESSION['dangnhap'])){
 <body>
     
     <div class="bg-light">
-    <h3 class="text-center">Welcome to AdminCp</h3>
-        <div class="container">
-        <?php
+        <div class="container-fluid">
+            <div class="row">
+            <?php
             include("config/connect.php");
             include("modules/header.php");
             include("modules/menu.php");
             include("modules/main.php");
             include("modules/footer.php");
         ?>
+            </div>
         </div>
     </div>
     

@@ -1,5 +1,6 @@
-<div id="main">
-            <div class="row">
+<div id="main" class="py-5 bg-light">
+           <div class="container-fuild">
+           <div class="row">
                 <?php
                     include("sidebar/sidebar.php");
                 ?>
@@ -38,4 +39,5 @@
                 ?>
                 
             </div>
+           </div>
         </div>
