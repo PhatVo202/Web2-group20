@@ -1,6 +1,6 @@
 
     <form class="form-group mt-5" method="POST" action="modules/quanlysp/xuly.php"  enctype="multipart/form-data">
-    <h4 class="text-center text-danger">Thêm danh mục sản phẩm</h4>
+    <h4 class="text-center text-danger">Thêm sản phẩm</h4>
         <div class="row">
             <label for="" class="col-5 font-weight-bold">Tên sản phẩm:</label>
             <input type="text"

@@ -8,6 +8,14 @@
                     
                     }
                 ?>
+ 
+     
+            <div class="arrow-steps clearfix">
+                <div class="step current"> <span> <a href="index.php?quanly=giohang" >Giỏ hàng</a></span> </div>
+                <div class="step"> <span><a href="index.php?quanly=vanchuyen" >Vận chuyển</a></span> </div>
+                <div class="step"> <span><a href="index.php?quanly=thongtinthanhtoan" >Thanh toán</a><span> </div>
+      
+            </div>
             <table class="table">
                 <thead>
                     <tr>
@@ -59,7 +67,7 @@
                                 if(isset($_SESSION['dangky'])){
                             ?>
                             <td colspan="1"> 
-                                <a href="pages/main/thanhtoan.php" class="btn btn-primary">Đặt hàng <i class="fa-solid fa-money-check"></i></a>
+                                <a href="index.php?quanly=vanchuyen" class="btn btn-primary">Hình thức vận chuyển <i class="fa-solid fa-money-check"></i></a>
                             </td>
                             <?php
                                 }else{

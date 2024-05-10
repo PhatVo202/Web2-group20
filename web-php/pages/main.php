@@ -33,6 +33,10 @@
                     include("main/dangnhap.php");
                 }else if ($tam === 'thaydoimatkhau') {
                     include("main/thaydoimatkhau.php");
+                }else if ($tam === 'vanchuyen') {
+                    include("main/vanchuyen.php");
+                }else if ($tam === 'thongtinthanhtoan') {
+                    include("main/thongtinthanhtoan.php");
                 } else {
                     include("main/index.php");
                 }

@@ -3,18 +3,8 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
-/* 
-.header {
-  width: 100%;
-  height: 250px;
-} */
 
-/* .header img {
-  width: 100%;
-  height: 100%;
-} */
-
-/* .menu {
+.menu {
   width: 100%;
   height: 50px;
 }
@@ -40,7 +30,7 @@ body {
 
 .menu ul li a:hover {
   color: orangered;
-} */
+}
 
 #main {
   width: 100%;
@@ -76,102 +66,4 @@ ul.admincp__list {
 #navbarSupportedContent .navbar-light .navbar-nav .nav-link:hover {
   color: orangered;
   transition: all 0.5s;
-}
-
-/* CAROUSEL */
-
-.carouselMovie {
-  position: relative;
-}
-
-.carouselMovie .carousel-caption {
-  left: 50%;
-  top: 50%;
-  text-align: left;
-  transform: translate(-50%, -50%);
-}
-
-.carouselMovie .carousel-caption p:first-child {
-  font-size: 0.875rem;
-  color: #fbbd61;
-  letter-spacing: 2px;
-}
-
-.carousel-caption .carousel-text h2 {
-  font-size: 3.5rem;
-}
-
-.carouselMovie .carousel__trailer > span {
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  border: 1px solid white;
-  display: inline-block;
-  border-radius: 100%;
-  text-align: center;
-  line-height: 40px;
-}
-
-.carouselMovie .carousel__trailer button {
-  background: linear-gradient(to right, #fbbd61, #ec7532);
-  box-shadow: 0 0 20px 0 #fbbd61;
-  border-radius: 40px;
-  padding: 10px 35px;
-  border: none;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  color: white;
-}
-
-.carouselMovie .carousel__trailer button i,
-.carouselMovie .carousel__trailer button > span {
-  position: relative;
-}
-
-.carouselMovie .carousel__trailer button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: block;
-  background-color: #ec7532;
-  height: 100%;
-  transform: skewX(30deg) translateX(-110%);
-  transition: all 0.5s;
-}
-
-.carouselMovie .carousel__trailer button:hover::before {
-  transform: skewX(0) translateX(0);
-  color: white;
-}
-
-.carouselMovie .carousel__trailer button:hover,
-.carouselMovie .carousel__trailer button:hover i {
-  color: white;
-  z-index: 2;
-}
-
-#movieCarousel .carousel-indicators {
-  justify-content: flex-start;
-  left: 50%;
-  bottom: 10%;
-  transform: translateX(-50%);
-  margin-left: 0;
-  margin-right: 0;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-#movieCarousel .carousel-indicators li {
-  width: 7px;
-  height: 7px;
-  border-radius: 100%;
-  background-color: transparent;
-  border: 2px solid white;
-}
-
-#movieCarousel .carousel-indicators li.active {
-  background-color: white;
 }

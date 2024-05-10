@@ -18,3 +18,13 @@ h3 {
 .admincp__list li {
   border: 1px solid #333;
 }
+
+/**Menuadmin*/
+
+#mainNav {
+  list-style: none;
+}
+
+#mainNav .active {
+  color: #ebe;
+}
